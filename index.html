@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload IMG</title>
-    <link rel="stylesheet" href="style/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="style/styyle.css">
+	<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4007/4007710.png">
+	<title>Upload Img</title>
 </head>
 <body>
-  <div class="drag-area">
-    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
-    <header>Coloque su Archivo</header>
-    <button>Buscar Archivo</button>
-    <button class="upload">Subir Imagen</button>
-    <input type="file" hidden>
-  </div>
-
-  <script src="js/script.js"></script>
-
+	<div class="container" >
+			<form action="upload.php" method="POST" enctype="multipart/form-data">
+			<div class="img-area" data-img="">
+				<i id="img" class='bx bxs-cloud-upload icon'></i>
+				<span class="file-status">Sin Imagen</span>
+			</div>
+			<label style="text-align: center;" class="select-image" for="custom-file">Seleccione su Imagen</label>
+			
+			<input type="file" name="file" id="custom-file" hidden>
+			<input type="submit" class="upload-image" name="upload" value="upload">
+			</form>
+	</div>
+	<script src="js/main.js"></script>
 </body>
 </html>
